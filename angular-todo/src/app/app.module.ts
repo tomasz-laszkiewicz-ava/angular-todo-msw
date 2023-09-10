@@ -1,23 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { TodoItemComponent } from './todo-list/todo-item/todo-item.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { MessageService } from './shared/message.service';
-import { HttpErrorHandler } from './shared/http-error-handler.service';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AddEditTodoComponent } from './shared/add-edit-modal/add-edit-todo/add-edit-todo.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
+import { TodoItemComponent } from "./todo-list/todo-item/todo-item.component";
+import { TodoListComponent } from "./todo-list/todo-list.component";
+import { MessageService } from "./shared/message.service";
+import { HttpErrorHandler } from "./shared/http-error-handler.service";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AddEditTodoComponent } from "./shared/add-edit-modal/add-edit-todo/add-edit-todo.component";
+
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ToastrModule } from "ngx-toastr";
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoItemComponent,
-    TodoListComponent,    
-    AddEditTodoComponent
+    TodoListComponent,
+    AddEditTodoComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +28,11 @@ import { AddEditTodoComponent } from './shared/add-edit-modal/add-edit-todo/add-
     HttpClientModule,
     NgbModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [HttpClient, HttpErrorHandler, MessageService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

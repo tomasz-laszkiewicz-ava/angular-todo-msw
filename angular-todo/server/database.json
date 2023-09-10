@@ -15,18 +15,11 @@
       "done": false
     },
     {
-      "id": 5,
-      "label": "Read service method returns",
-      "description": "Read the last todo value from service call",
-      "category": "bureaucracy",
-      "done": false
-    },
-    {
       "id": 6,
       "label": "Date manipulations",
       "description": "Use current culture for date formatting",
       "category": "bureaucracy",
-      "done": false
+      "done": "11-09-2023"
     },
     {
       "id": 7,
@@ -74,6 +67,13 @@
       "id": 14,
       "label": "Add language support",
       "description": "Translations (at least for EN, FR)",
+      "category": "bureaucracy",
+      "done": false
+    },
+    {
+      "id": 16,
+      "label": "TEST",
+      "description": "bb",
       "category": "bureaucracy",
       "done": false
     }
