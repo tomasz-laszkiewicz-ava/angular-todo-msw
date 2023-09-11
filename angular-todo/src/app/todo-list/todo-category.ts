@@ -1,3 +1,5 @@
 export enum TodoCategory {
-    house, bureaucracy
+  house,
+  bureaucracy,
+  work,
 }
