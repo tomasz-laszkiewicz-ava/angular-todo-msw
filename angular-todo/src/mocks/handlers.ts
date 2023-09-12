@@ -27,6 +27,11 @@ export const handlers = [
       return res(ctx.status(400));
     }
 
+    if (body.label.startsWith("pass")) {
+      req.passthrough();
+      return;
+    }
+
     return res(ctx.delay(1000), ctx.status(200), ctx.json(body));
   }),
 
