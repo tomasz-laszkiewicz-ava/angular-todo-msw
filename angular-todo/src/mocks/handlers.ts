@@ -22,6 +22,11 @@ export const handlers = [
 
   rest.post("*/tasks", async (req, res, ctx) => {
     const body = (await req.json()) as TodoItemEntity;
+
+    if (body.label.startsWith("error")) {
+      return res(ctx.status(400));
+    }
+
     return res(ctx.delay(1000), ctx.status(200), ctx.json(body));
   }),
 
