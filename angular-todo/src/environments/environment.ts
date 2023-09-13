@@ -2,9 +2,14 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { worker } from "../mocks/browser";
+worker
+  .start({ onUnhandledRequest: "warn", waitUntilReady: true })
+  .then((v) => console.log(`msw started`, v));
+
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000'
+  apiUrl: "http://localhost:3000",
 };
 
 /*
